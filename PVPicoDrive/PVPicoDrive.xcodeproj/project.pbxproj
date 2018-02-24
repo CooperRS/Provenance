@@ -1780,6 +1780,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
@@ -1826,6 +1827,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = c99;
@@ -1865,7 +1867,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1896,7 +1897,6 @@
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-fPIC",
-					"-ffunction-sections",
 					"-falign-functions=2",
 					"-DNDEBUG",
 					"-DEMU_F68K",
@@ -1935,7 +1935,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = NO;
@@ -1960,7 +1959,6 @@
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-fPIC",
-					"-ffunction-sections",
 					"-falign-functions=2",
 					"-DNDEBUG",
 					"-DEMU_F68K",
@@ -2002,7 +2000,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2033,7 +2030,6 @@
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-fPIC",
-					"-ffunction-sections",
 					"-falign-functions=2",
 					"-DNDEBUG",
 					"-DEMU_F68K",
@@ -2073,7 +2069,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = NO;
@@ -2098,7 +2093,6 @@
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-fPIC",
-					"-ffunction-sections",
 					"-falign-functions=2",
 					"-DNDEBUG",
 					"-DEMU_F68K",
