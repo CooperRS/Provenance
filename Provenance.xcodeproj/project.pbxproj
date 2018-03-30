@@ -1714,6 +1714,7 @@
 				BE9FDCB31C210B9E0046DF0E /* Sources */,
 				BE9FDCB41C210B9E0046DF0E /* Frameworks */,
 				BE9FDCB51C210B9E0046DF0E /* Resources */,
+				CA4E157E206E9BFC00F7D8F7 /* Set Build Number */,
 			);
 			buildRules = (
 			);
@@ -2040,7 +2041,49 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Provenance/Resources/createVersionHeader.sh\n";
+			shellScript = ./Provenance/Resources/createVersionHeader.sh;
+		};
+		CA4E157E206E9BFC00F7D8F7 /* Set Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Set Build Number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=`git rev-list --count HEAD`\n#/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n# Use the built products dir so GIT doesn't want to constantly upload a changed Info.plist in the code directory - jm\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"";
+		};
+		E32D548D1D99C82E00C41A52 /* Set Git SHA */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Set Git SHA";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "revision=$(git rev-parse --short HEAD)\n#/usr/libexec/PlistBuddy -c \"Set :Revision $revision\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n# Use the built products dir so GIT doesn't want to constantly upload a changed Info.plist in the code directory - jm\n/usr/libexec/PlistBuddy -c \"Set :Revision $revision\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"";
+		};
+		E3D030EE1D980D9F00045BE6 /* Set Git SHA */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Set Git SHA";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "revision=$(git rev-parse --short HEAD)\n#/usr/libexec/PlistBuddy -c \"Set :Revision $revision\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n# Use the built products dir so GIT doesn't want to constantly upload a changed Info.plist in the code directory - jm\n/usr/libexec/PlistBuddy -c \"Set :Revision $revision\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"";
 		};
 		CA4E157E206E9BFC00F7D8F7 /* Set Build Number */ = {
 			isa = PBXShellScriptBuildPhase;
